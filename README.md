@@ -1,0 +1,1 @@
+# dyn-groupe-vectoria-v0
