@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Consulting | VECTORIA ONE — Solutions digitales, Dakar</title>
 <meta name="description" content="Transformation digitale, audit SI, stratégie produit : nous challengeons vos choix avec des faits, des mesures et du code — pas des slides.">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{if(localStorage.getItem('carmy-theme')==='light')d.classList.add('light');if(localStorage.getItem('carmy-lang')==='en')d.setAttribute('data-lang','en');}catch(e){}})()</script>
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('carmy-theme');if(t!=='dark')d.classList.add('light');if(localStorage.getItem('carmy-lang')==='en')d.setAttribute('data-lang','en');}catch(e){}})()</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1392,11 +1392,353 @@ html.light .fcard,html.light .mb,html.light .stcard,html.light .tq-card,html.lig
 html.light .ct-field input,html.light .ct-field select,html.light .ct-field textarea{
   background:rgba(255,255,255,.62)!important;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 
+
+/* ================= MEGA-MENU SERVICES — version enrichie ================= */
+.mega.mega-xl{width:min(64rem,96vw);padding:0;overflow:hidden}
+.mega-xl .mx-top{display:grid;grid-template-columns:1.55fr .95fr}
+@media(max-width:900px){.mega-xl .mx-top{grid-template-columns:1fr}}
+.mega-xl .mx-svc{padding:1.9rem 1.9rem 1.6rem}
+.mega-xl .mx-ttl{font-family:var(--fdisplay);font-size:1.05rem;font-weight:600;color:var(--head);margin-bottom:1.35rem}
+.mega-xl .mx-grid{display:grid;grid-template-columns:1fr 1fr;gap:.45rem}
+@media(max-width:640px){.mega-xl .mx-grid{grid-template-columns:1fr}}
+.mega-xl .mx-it{display:flex;align-items:flex-start;gap:.85rem;padding:.7rem .8rem;border-radius:12px;text-decoration:none;
+  transition:background .3s,transform .3s}
+.mega-xl .mx-it:hover{background:color-mix(in srgb,var(--blue-bright) 10%,transparent);transform:translateX(3px)}
+.mega-xl .mx-ic{width:44px;height:44px;flex-shrink:0;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);background:color-mix(in srgb,var(--blue-bright) 8%,transparent);color:var(--blue-bright);
+  transition:border-color .3s,background .3s}
+.mega-xl .mx-it:hover .mx-ic{border-color:color-mix(in srgb,var(--blue-bright) 45%,transparent);
+  background:color-mix(in srgb,var(--blue-bright) 16%,transparent)}
+.mega-xl .mx-it b{display:block;font-size:.95rem;font-weight:600;color:var(--head);line-height:1.25;letter-spacing:-.01em}
+.mega-xl .mx-it small{display:block;margin-top:.2rem;font-size:.82rem;color:var(--muted);line-height:1.35}
+/* colonne secteurs */
+.mega-xl .mx-sec{padding:1.9rem 1.7rem;border-left:1px solid var(--line);
+  background:linear-gradient(160deg,color-mix(in srgb,var(--blue-bright) 12%,transparent),transparent 65%)}
+@media(max-width:900px){.mega-xl .mx-sec{border-left:0;border-top:1px solid var(--line)}}
+.mega-xl .mx-sec-list{display:flex;flex-direction:column;gap:.15rem}
+.mega-xl .mx-sl{display:flex;align-items:center;gap:.7rem;padding:.6rem .5rem;border-radius:10px;text-decoration:none;
+  font-size:.95rem;color:var(--text);transition:background .3s,color .3s,transform .3s}
+.mega-xl .mx-sl:hover{background:rgba(255,255,255,.05);transform:translateX(3px);color:var(--head)}
+html.light .mega-xl .mx-sl:hover{background:rgba(15,23,42,.05)}
+.mega-xl .mx-sl .sq{width:22px;height:22px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--sc) 20%,transparent);color:var(--sc)}
+/* bandeau bas */
+.mega-xl .mx-foot{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+  padding:1.35rem 1.9rem;border-top:1px solid var(--line);background:color-mix(in srgb,var(--ink) 45%,transparent)}
+html.light .mega-xl .mx-foot{background:rgba(255,255,255,.5)}
+.mega-xl .mx-foot b{display:block;font-family:var(--fdisplay);font-size:1.02rem;font-weight:600;color:var(--head)}
+.mega-xl .mx-foot small{display:block;margin-top:.2rem;font-size:.86rem;color:var(--muted)}
+.mega-xl .mx-cta{display:inline-flex;align-items:center;gap:.6rem;padding:.8rem 1.35rem;border-radius:999px;
+  background:linear-gradient(135deg,var(--blue-bright),var(--blue) 70%);color:#fff;font-size:.9rem;font-weight:600;
+  text-decoration:none;white-space:nowrap;transition:transform .3s,box-shadow .3s}
+.mega-xl .mx-cta:hover{transform:translateX(3px);box-shadow:0 14px 34px -12px color-mix(in srgb,var(--blue-bright) 65%,transparent)}
+
+
+/* ================= MODE CLAIR PREMIUM — liquid glass global ================= */
+html.light{
+  --ink:#F4F6FA;--panel:rgba(255,255,255,.58);--head:#0E1319;--text:#28303A;--muted:#5A6572;
+  --line:rgba(15,23,42,.10);--dim:#8A94A2;
+}
+html.light body{background:
+  radial-gradient(1100px 620px at 12% -8%,rgba(47,123,255,.14),transparent 60%),
+  radial-gradient(900px 560px at 92% 4%,rgba(127,174,255,.16),transparent 62%),
+  linear-gradient(180deg,#F7F9FD 0%,#EFF3FA 48%,#F5F7FC 100%);
+  background-attachment:fixed;color:var(--text)}
+
+/* --- toutes les surfaces en verre --- */
+html.light .glass,html.light .bn,html.light .fcard,html.light .mb,html.light .sx,html.light .imp-card,
+html.light .step-card,html.light .stcard,html.light .tmc,html.light .tq-card,html.light .ct-form,
+html.light .p2-card,html.light .feat4>div,html.light .qmq .q,html.light .aa-item,html.light .faq-item,
+html.light .dd-light,html.light .s3c,html.light .pjc,html.light .indc,html.light .sw-pane,html.light .mega{
+  -webkit-backdrop-filter:blur(24px) saturate(1.85)!important;backdrop-filter:blur(24px) saturate(1.85)!important}
+
+html.light .glass,html.light .bn,html.light .fcard,html.light .mb,html.light .sx,html.light .step-card,
+html.light .stcard,html.light .tmc,html.light .tq-card,html.light .ct-form,html.light .p2-card,html.light .dd-light{
+  background:rgba(255,255,255,.58);
+  border:1px solid rgba(255,255,255,.85);
+  box-shadow:0 20px 54px -26px rgba(15,32,64,.24),
+             inset 0 1px 0 rgba(255,255,255,.95),
+             inset 0 -1px 0 rgba(255,255,255,.4)}
+html.light .glass:hover,html.light .fcard:hover,html.light .mb:hover,html.light .step-card:hover{
+  background:rgba(255,255,255,.72);
+  box-shadow:0 28px 68px -28px rgba(15,32,64,.3),inset 0 1px 0 rgba(255,255,255,1)}
+
+/* --- barre de navigation --- */
+html.light .nav-pill.glass{background:rgba(255,255,255,.88)!important;
+  -webkit-backdrop-filter:blur(18px) saturate(1.5)!important;backdrop-filter:blur(18px) saturate(1.5)!important;
+  border:1px solid rgba(255,255,255,.9)!important;
+  box-shadow:0 12px 40px -16px rgba(15,32,64,.24),inset 0 1px 0 rgba(255,255,255,1)!important}
+html.light .nav-links a{color:#2A313C!important}
+html.light .nav-links a:hover,html.light .nav-links a[aria-current]{color:var(--blue-bright)!important}
+html.light .nav-logo img{filter:none!important}
+html.light .nav-toggle,html.light .nav-lang{background:rgba(255,255,255,.7)!important;border-color:rgba(15,23,42,.12)!important;color:#2A313C}
+html.light .nav-burger span{background:#2A313C}
+
+/* --- mega-menu --- */
+html.light .mega{background:rgba(255,255,255,.94)!important;border-color:rgba(255,255,255,.9)!important;
+  box-shadow:0 40px 96px -34px rgba(15,32,64,.34)!important}
+html.light .mega-xl .mx-it:hover{background:rgba(47,123,255,.1)}
+html.light .mega-xl .mx-ic{background:rgba(47,123,255,.1);border-color:rgba(15,23,42,.08)}
+
+/* --- textes lisibles --- */
+html.light h1,html.light h2,html.light h3,html.light .h-lg,html.light .h-section{color:var(--head)}
+html.light p,html.light .lead,html.light .sec-sub,html.light .desc{color:var(--text)}
+html.light .muted,html.light small,html.light .stat-lbl{color:var(--muted)}
+html.light .eyebrow{color:var(--blue)}
+
+/* --- sections sombres qui restent sombres : on garde le contraste interne --- */
+html.light .bg-ink2{background:rgba(255,255,255,.42);border-color:rgba(15,23,42,.08)}
+html.light .cta-section{background:linear-gradient(150deg,rgba(255,255,255,.66),rgba(238,244,255,.5))}
+html.light .site-footer{background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(233,240,251,.72));
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-top:1px solid rgba(15,23,42,.08)}
+html.light .site-footer,html.light .site-footer p,html.light .site-footer a{color:#2B3440}
+html.light .site-footer h4,html.light .site-footer b{color:#0E1319}
+
+/* --- champs de formulaire --- */
+html.light input,html.light select,html.light textarea{
+  background:rgba(255,255,255,.78)!important;border-color:rgba(15,23,42,.12)!important;color:#0E1319!important;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+html.light input::placeholder,html.light textarea::placeholder{color:#93A0AF}
+
+/* --- boutons --- */
+html.light .btn-ghost{background:rgba(255,255,255,.6);border-color:rgba(15,23,42,.14);color:#1E2732;
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+html.light .btn-ghost:hover{background:rgba(255,255,255,.85);border-color:var(--blue-bright);color:var(--blue)}
+
+/* ================= FINITIONS PREMIUM ================= */
+/* icônes : trait plus fin et net */
+iconify-icon{vertical-align:middle}
+.mx-ic iconify-icon,.icon-badge iconify-icon,.fi{stroke-width:1.5}
+/* transitions douces généralisées */
+.btn,.mega-item,.mx-it,.mx-sl,.card,.glass{will-change:transform}
+/* défilement fluide */
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* sélection de texte */
+::selection{background:color-mix(in srgb,var(--blue-bright) 28%,transparent);color:var(--head)}
+/* barre de défilement discrète */
+html.light ::-webkit-scrollbar{width:11px;height:11px}
+html.light ::-webkit-scrollbar-track{background:rgba(15,23,42,.04)}
+html.light ::-webkit-scrollbar-thumb{background:rgba(15,23,42,.18);border-radius:99px;border:3px solid transparent;background-clip:content-box}
+html.light ::-webkit-scrollbar-thumb:hover{background:rgba(15,23,42,.3);background-clip:content-box}
+
+
+/* ================= LOADER — jauge de pourcentage ================= */
+#preloader .pct{margin-top:.9rem;font-family:var(--fdata);font-size:.78rem;letter-spacing:.16em;font-weight:700;
+  color:var(--blue-bright);font-variant-numeric:tabular-nums}
+html.light #preloader{background:linear-gradient(180deg,#F7F9FD,#EFF3FA)}
+html.light #preloader .bar{background:rgba(15,23,42,.1)}
+
+
+/* ================= MODE CLAIR — corrections de lisibilité ================= */
+/* toutes les surfaces réagissent au thème */
+html.light .bn,html.light .bn-dark,html.light .imp-card,html.light .sw-pane,html.light .dd-dark,
+html.light .pjc,html.light .indc,html.light .s3c,html.light .tcp,html.light .wa-c,html.light .sv-st,
+html.light .sv-stats>div,html.light .cmp-card,html.light .pro-c,html.light .ct2-card{transition:background .45s,color .45s,border-color .45s}
+
+/* textes : contraste garanti */
+html.light{color-scheme:light}
+html.light body,html.light p,html.light li,html.light td,html.light .lead,html.light .desc,
+html.light .sec-sub,html.light .imp-desc,html.light .mx-it small{color:#2A323C}
+html.light h1,html.light h2,html.light h3,html.light h4,html.light b,html.light strong,
+html.light .h-lg,html.light .h-section,html.light .stat-num,html.light .mx-num{color:#0D1218}
+html.light .muted,html.light small,html.light .stat-lbl,html.light .imp-lbl,html.light figcaption{color:#5C6673}
+html.light .eyebrow{color:var(--blue)}
+html.light a{color:inherit}
+
+/* cartes sombres qui doivent s'éclaircir */
+html.light .bn-dark,html.light .dd-dark{background:rgba(255,255,255,.6)!important;
+  -webkit-backdrop-filter:blur(24px) saturate(1.85);backdrop-filter:blur(24px) saturate(1.85);
+  border-color:rgba(255,255,255,.88)!important}
+html.light .bn-dark h3,html.light .bn-dark .bn-num,html.light .dd-dark h2{color:#0D1218!important}
+html.light .bn-dark p,html.light .bn-dark .bn-top,html.light .dd-dark p{color:#3B4652!important}
+html.light .dd-dark .btn2{background:#0D1218;color:#fff}
+html.light .wa-c.shot h3,html.light .wa-c.shot p{color:#fff!important}
+html.light .indc h3,html.light .indc p{color:#fff!important}
+html.light .pjc{color:#101418}
+html.light .ct2-card:not(.light) h2,html.light .ct2-card:not(.light) .p,
+html.light .ct2-card:not(.light) .ct2-list span{color:#fff!important}
+
+/* sections à fond sombre : conserver le contraste interne */
+html.light .bg-ink2,html.light .border-y{background:rgba(255,255,255,.44);border-color:rgba(15,23,42,.08)}
+html.light .tcap-strip{border-color:rgba(15,23,42,.1)}
+html.light .hero-veil,html.light .hs-veil{background:linear-gradient(180deg,rgba(255,255,255,.3),rgba(246,249,253,.72))}
+
+/* barre de navigation : NETTE, logo visible */
+html.light .site-nav .nav-pill{background:rgba(255,255,255,.96)!important;
+  -webkit-backdrop-filter:blur(8px) saturate(1.1)!important;backdrop-filter:blur(8px) saturate(1.1)!important;
+  border:1px solid rgba(15,23,42,.09)!important;
+  box-shadow:0 8px 30px -12px rgba(15,32,64,.2)!important}
+html.light .nav-logo img{filter:none!important;opacity:1!important;mix-blend-mode:normal!important}
+html.light .nav-logo b,html.light .nav-logo span{color:#0D1218!important}
+html.light .nav-links a{color:#333C48!important;font-weight:600}
+html.light .nav-links a:hover,html.light .nav-links a[aria-current]{color:var(--blue-bright)!important}
+
+/* pied de page */
+html.light .site-footer *{color:#2A323C}
+html.light .site-footer h4,html.light .site-footer b,html.light .site-footer strong{color:#0D1218}
+html.light .footer-logo{filter:none!important;opacity:1!important}
+
+
+/* ================= BARRE DE MENU — correctif de débordement ================= */
+.site-nav{padding:0 1rem}
+.nav-pill{max-width:min(1104px,calc(100vw - 2rem));box-sizing:border-box;overflow:visible;
+  gap:.85rem;padding:.5rem .55rem .5rem 1rem}
+@media(max-width:1279px){
+  .nav-pill{width:auto;max-width:calc(100vw - 2rem);justify-content:space-between;gap:.6rem}
+  .nav-burger{display:inline-flex!important;position:static!important;margin:0!important;flex-shrink:0}
+}
+@media(max-width:520px){
+  .site-nav{padding:0 .7rem}
+  .nav-pill{max-width:calc(100vw - 1.4rem);padding:.45rem .45rem .45rem .8rem;gap:.45rem}
+  .nav-burger{width:38px!important;height:38px!important}
+  .nav-tools{gap:.3rem}
+  .nav-tool{width:32px!important;height:32px!important;font-size:.6rem!important}
+}
+@media(max-width:380px){
+  .nav-pill{padding:.4rem .4rem .4rem .65rem}
+  .nav-logo .wordmark{height:16px}
+  .nav-logo img.mark{width:24px;height:24px}
+  .nav-burger{width:34px!important;height:34px!important}
+}
+.nav-burger{display:none;width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  align-items:center;justify-content:center;gap:4px;flex-direction:column;cursor:pointer;
+  border:1px solid var(--line);background:color-mix(in srgb,var(--blue-bright) 8%,transparent);
+  transition:border-color .3s,background .3s}
+.nav-burger:hover{border-color:color-mix(in srgb,var(--blue-bright) 45%,transparent)}
+.nav-burger span{display:block;width:15px;height:1.6px;border-radius:2px;background:var(--head);transition:.35s}
+html.light .nav-burger span{background:#1E2732}
+.nav-logo{flex-shrink:0;min-width:0}
+.nav-tools{flex-shrink:0}
+.nav-cta{flex-shrink:0;white-space:nowrap}
+
+/* ================= BARRE + LOGO NETS EN MODE CLAIR ================= */
+html.light .site-nav .nav-pill,html.light .nav-pill.glass{
+  background:#FFFFFF!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+  border:1px solid rgba(15,23,42,.10)!important;
+  box-shadow:0 6px 24px -10px rgba(15,32,64,.18)!important}
+html.light .nav-logo img,html.light .nav-logo .wordmark,html.light .nav-logo .mark{
+  filter:none!important;opacity:1!important;mix-blend-mode:normal!important;image-rendering:auto}
+html.light .nav-links a{color:#333C48!important;font-weight:700}
+html.light .nav-links a:hover,html.light .nav-links a[aria-current="page"]{color:#1E5FE0!important}
+html.light .nav-tool{background:rgba(15,23,42,.05)!important;border-color:rgba(15,23,42,.1)!important;color:#333C48!important}
+html.light .nav-tool:hover{background:rgba(30,95,224,.1)!important;color:#1E5FE0!important}
+html.light .nav-burger{background:rgba(15,23,42,.04)!important;border-color:rgba(15,23,42,.1)!important}
+/* menu mobile déroulant lisible */
+html.light .nav-drawer,html.light .mobile-menu,html.light .nav-mobile{
+  background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html.light .nav-drawer a,html.light .mobile-menu a{color:#1E2732!important}
+
+/* ================= MODE CLAIR — contrastes garantis ================= */
+html.light{--head:#0C1117;--text:#2A323C;--muted:#5C6673;--dim:#8A94A2;--line:rgba(15,23,42,.11)}
+html.light body{color:#2A323C}
+html.light h1,html.light h2,html.light h3,html.light h4,html.light h5,
+html.light .h-lg,html.light .h-section,html.light .stat-num,html.light .mx-num,
+html.light b,html.light strong,html.light .imp-metric{color:#0C1117}
+html.light p,html.light li,html.light td,html.light .lead,html.light .desc,html.light .sec-sub,
+html.light .imp-desc,html.light figcaption,html.light label{color:#2A323C}
+html.light .muted,html.light small,html.light .stat-lbl,html.light .imp-lbl,html.light .mx-lbl,
+html.light .mega-item small,html.light .mx-it small{color:#5A6572}
+html.light .eyebrow{color:#1E5FE0}
+html.light a:not(.btn):not(.nav-cta):not(.nav-logo){color:inherit}
+html.light input,html.light select,html.light textarea{color:#0C1117!important}
+html.light input::placeholder,html.light textarea::placeholder{color:#8E99A8!important}
+
+/* --- surfaces sombres qui doivent s'éclaircir --- */
+html.light .bn-dark,html.light .dd-dark,html.light .bx-3{
+  background:rgba(255,255,255,.62)!important;border-color:rgba(255,255,255,.9)!important;
+  -webkit-backdrop-filter:blur(22px) saturate(1.8);backdrop-filter:blur(22px) saturate(1.8)}
+html.light .bx-3 h3,html.light .bn-dark h3,html.light .dd-dark h2,html.light .bx-3 .lbl{color:#0C1117!important}
+html.light .bx-3 p,html.light .bn-dark p,html.light .dd-dark p,html.light .bx-3 .end{color:#3B4652!important}
+html.light .bx-3 .bx-dots span:not(.on){background:#C3CBD8!important}
+html.light .wd-band{background:#1E2228!important}
+/* textes sur images : restent blancs */
+html.light .indc h3,html.light .indc p,html.light .wa-c.shot h3,html.light .wa-c.shot p,
+html.light .bx-2 .cap,html.light .bx-2 .cap b,html.light .s3c h3,html.light .s3c p,
+html.light .hs-title,html.light .hs-meta>*,html.light .hs-badge{color:#fff!important}
+html.light .hs-title .accent{color:#7FAEFF!important}
+
+/* --- transitions : toutes les surfaces réagissent au changement de thème --- */
+body,.glass,.bn,.bx-c,.fcard,.mb,.sx,.imp-card,.step-card,.tmc,.tcp,.wa-c,.sv-st,.sv-stats>div,
+.cmp-card,.pro-c,.ct2-card,.s3b-c,.pjc,.indc,.dd-light,.pl-card,.pl-item,.nav-pill,.mega,
+.site-footer,.faq-item,.aa-item,input,select,textarea,.tcap-strip,.wq-q,.qmq .q{
+  transition:background-color .45s ease,color .45s ease,border-color .45s ease,box-shadow .45s ease}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+
+
+/* --- confinement des rubans et de la page --- */
+html,body{max-width:100%;overflow-x:hidden}
+.sv-in2{overflow:hidden}
+.sv-tech{width:100%;max-width:100vw;overflow:hidden}
+.sv-tr{will-change:transform}
+.tcap,.tcap-strip,.tmarq,.wq-marq,.pl-track-wrap,.marquee,.qmq,.team-wrap{overflow:hidden;max-width:100%}
+.sv-end{max-width:100%;box-sizing:border-box}
+@media(max-width:520px){
+  .sv-end{padding:1.6rem;flex-direction:column;align-items:flex-start}
+  .sv-chip{font-size:.7rem;padding:.45rem .85rem}
+}
+/* barre nav : marge minimale sur très petits écrans */
+@media(max-width:340px){
+  .site-nav{padding:0 .5rem}
+  .nav-pill{max-width:calc(100vw - 1rem);padding:.35rem .35rem .35rem .55rem;gap:.35rem}
+  .nav-logo .wordmark{height:14px}
+  .nav-logo img.mark{width:22px;height:22px}
+  .nav-burger{width:32px!important;height:32px!important}
+  .nav-tool{width:29px!important;height:29px!important}
+}
+
+
+/* ================= NAV : état replié — plus aucun débordement ================= */
+.site-nav.is-compact .nav-pill{
+  max-width:min(46rem,calc(100vw - 2rem))!important;width:auto!important;
+  gap:.6rem!important;padding:.5rem .5rem .5rem .85rem!important;
+  justify-content:space-between!important;flex-wrap:nowrap!important;overflow:visible}
+.site-nav.is-compact .nav-logo{flex:0 1 auto;min-width:0;overflow:hidden}
+.site-nav.is-compact .nav-logo .wordmark{height:19px;max-width:100%}
+.site-nav.is-compact .nav-links{display:none!important;flex:0!important;width:0!important;margin:0!important}
+.site-nav.is-compact .nav-tools{flex-shrink:0}
+.site-nav.is-compact .nav-cta{flex-shrink:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  padding:.55rem 1rem!important;font-size:.62rem!important}
+.site-nav.is-compact .nav-burger{flex-shrink:0;margin-left:0}
+@media(max-width:900px){.site-nav.is-compact .nav-cta{display:none!important}}
+@media(max-width:520px){
+  .site-nav.is-compact .nav-pill{max-width:calc(100vw - 1.4rem)!important;padding:.45rem .45rem .45rem .7rem!important;gap:.4rem!important}
+  .site-nav.is-compact .nav-logo .wordmark{height:16px}
+}
+/* sécurité : rien ne sort de la pilule, quel que soit l'état */
+.nav-pill{overflow:visible;flex-wrap:nowrap}
+.nav-pill>*{min-width:0}
+
+
+/* ================= NAV : repli piloté par le sens du défilement ================= */
+.site-nav{transition:transform .5s cubic-bezier(.3,0,.2,1),top .45s cubic-bezier(.3,0,.2,1)}
+.site-nav .nav-pill{transition:max-width .55s cubic-bezier(.3,0,.2,1),padding .45s cubic-bezier(.3,0,.2,1),
+  border-radius .45s,box-shadow .45s,background .45s,gap .45s}
+/* état déplié (haut de page ou défilement vers le haut) */
+.site-nav.nav-open .nav-pill{max-width:min(1104px,calc(100vw - 2rem))!important}
+.site-nav.nav-open .nav-links{display:flex!important;opacity:1!important;max-width:none!important;
+  pointer-events:auto!important;transition:opacity .45s ease .1s}
+@media(max-width:1279px){.site-nav.nav-open .nav-links{display:none!important}}
+/* état replié (défilement vers le bas) */
+.site-nav.nav-tight .nav-pill{max-width:min(30rem,calc(100vw - 2rem))!important;
+  padding:.45rem .45rem .45rem .8rem!important;gap:.5rem!important;
+  box-shadow:0 12px 34px -14px rgba(15,32,64,.32)!important}
+.site-nav.nav-tight .nav-links{display:none!important;opacity:0!important;max-width:0!important;
+  pointer-events:none!important;transition:opacity .2s ease}
+.site-nav.nav-tight .nav-cta{padding:.5rem .95rem!important;font-size:.6rem!important}
+.site-nav.nav-tight .nav-logo .wordmark{height:17px}
+@media(max-width:520px){.site-nav.nav-tight .nav-pill{max-width:calc(100vw - 1.4rem)!important}}
+/* le bouton d'action reste lisible en mode clair */
+.nav-cta,.nav-cta *,html.light .nav-cta,html.light .nav-cta *{color:#fff!important}
+.btn-primary,.btn-primary *,html.light .btn-primary,html.light .btn-primary *{color:#fff!important}
+html.light .btn-primary iconify-icon,html.light .nav-cta iconify-icon{color:#fff!important}
+
 </style>
 </head>
 <body data-page="secteurs">
 
-<div id="preloader"><img src="https://res.cloudinary.com/dkd7dkkuj/image/upload/v1784942499/Vectoria_Icon_2_zymake.png" alt="VECTORIA ONE"><div class="bar"><i></i></div></div>
+<div id="preloader"><img src="https://res.cloudinary.com/dkd7dkkuj/image/upload/v1784942499/Vectoria_Icon_2_zymake.png" alt="VECTORIA ONE"><div class="bar"><i></i></div><div class="pct" id="pct">0%</div></div>
 
 <header class="site-nav">
   <div class="nav-pill glass">
@@ -1412,14 +1754,11 @@ html.light .ct-field input,html.light .ct-field select,html.light .ct-field text
       <button class="nav-tool" data-theme-toggle aria-label="Basculer le thème"><iconify-icon class="ic-moon" icon="lucide:moon" width="15"></iconify-icon><iconify-icon class="ic-sun" icon="lucide:sun" width="15"></iconify-icon></button>
       <button class="nav-tool" data-lang-toggle aria-label="Changer de langue">EN</button>
     </div>
-    <a href="contact.html" class="btn btn-primary nav-cta">Démarrer un projet</a>
+    <a href="contact.html" class="btn btn-primary nav-cta">Demander un devis</a>
     <button class="nav-burger" aria-label="Ouvrir le menu"><span></span><span></span></button>
   </div>
   
-  <div class="mega" id="mega-expertises" aria-hidden="true">
-    <div class="mega-col"><a class="mega-item" href="services/dev-web.html"><span class="mega-ic"><iconify-icon icon="lucide:globe" width="18"></iconify-icon></span><span><b>Développement Web</b><small>Sites et applications web rapides, robustes, élégants.</small></span></a><a class="mega-item" href="services/dev-mobile.html"><span class="mega-ic"><iconify-icon icon="lucide:smartphone" width="18"></iconify-icon></span><span><b>Applications Mobiles</b><small>iOS et Android, natif ou cross-platform.</small></span></a><a class="mega-item" href="services/ui-ux.html"><span class="mega-ic"><iconify-icon icon="lucide:pen-tool" width="18"></iconify-icon></span><span><b>UI/UX Design</b><small>Des interfaces que vos utilisateurs adorent.</small></span></a><a class="mega-item" href="services/ecommerce.html"><span class="mega-ic"><iconify-icon icon="lucide:shopping-cart" width="18"></iconify-icon></span><span><b>E-commerce</b><small>Vendez en ligne, encaissez partout.</small></span></a><a class="mega-item" href="services/cloud-devops.html"><span class="mega-ic"><iconify-icon icon="lucide:cloud" width="18"></iconify-icon></span><span><b>Cloud & DevOps</b><small>Déploiements sûrs, infrastructures qui tiennent.</small></span></a><a class="mega-item" href="services/maintenance.html"><span class="mega-ic"><iconify-icon icon="lucide:wrench" width="18"></iconify-icon></span><span><b>Maintenance & Support</b><small>Vos applications veillées en continu.</small></span></a></div>
-    <div class="mega-visual"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Le studio Vectoria" loading="lazy"><span>Six savoir-faire, un studio</span></div>
-  </div>
+  <div class="mega mega-xl" id="mega-expertises" aria-hidden="true"><div class="mx-top"><div class="mx-svc"><div class="mx-ttl">Nos services</div><div class="mx-grid"><a class="mx-it" href="services/dev-web.html"><span class="mx-ic"><iconify-icon icon="lucide:globe" width="20"></iconify-icon></span><span><b>Développement Web</b><small>Sites et applications rapides</small></span></a><a class="mx-it" href="services/dev-mobile.html"><span class="mx-ic"><iconify-icon icon="lucide:smartphone" width="20"></iconify-icon></span><span><b>Applications Mobiles</b><small>iOS et Android, une base de code</small></span></a><a class="mx-it" href="services/ui-ux.html"><span class="mx-ic"><iconify-icon icon="lucide:pen-tool" width="20"></iconify-icon></span><span><b>Design UI/UX</b><small>Maquettes et design system</small></span></a><a class="mx-it" href="services/cloud-devops.html"><span class="mx-ic"><iconify-icon icon="lucide:cloud-cog" width="20"></iconify-icon></span><span><b>Cloud &amp; DevOps</b><small>Infrastructure et déploiement</small></span></a><a class="mx-it" href="services/ecommerce.html"><span class="mx-ic"><iconify-icon icon="lucide:shopping-cart" width="20"></iconify-icon></span><span><b>E-commerce</b><small>Boutiques et paiement en ligne</small></span></a><a class="mx-it" href="services/maintenance.html"><span class="mx-ic"><iconify-icon icon="lucide:life-buoy" width="20"></iconify-icon></span><span><b>Maintenance</b><small>Correctifs et évolutions</small></span></a></div></div><div class="mx-sec"><div class="mx-ttl">Secteurs</div><div class="mx-sec-list"><a class="mx-sl" href="secteur-book-keeping.html" style="--sc:#3cb024"><span class="sq"><iconify-icon icon="lucide:book-open-check" width="13"></iconify-icon></span>Bookkeeping</a><a class="mx-sl" href="secteur-logistics.html" style="--sc:#fb4403"><span class="sq"><iconify-icon icon="lucide:package-search" width="13"></iconify-icon></span>Logistics</a><a class="mx-sl" href="secteur-consulting.html" style="--sc:#d90a65"><span class="sq"><iconify-icon icon="lucide:search-code" width="13"></iconify-icon></span>Consulting</a></div></div></div><div class="mx-foot"><div><b>Vous ne savez pas par où commencer ?</b><small>Nous cadrons votre besoin et proposons la bonne approche.</small></div><a class="mx-cta" href="contact.html">Planifier un échange <iconify-icon icon="lucide:arrow-right" width="15"></iconify-icon></a></div></div>
   <div class="mega mega-solo" id="mega-apropos" aria-hidden="true">
     <div class="mega-col"><a class="mega-item" href="a-propos.html"><span class="mega-ic"><iconify-icon icon="lucide:building-2" width="18"></iconify-icon></span><span><b>Le studio</b><small>Notre histoire et nos valeurs.</small></span></a><a class="mega-item" href="faq.html"><span class="mega-ic"><iconify-icon icon="lucide:help-circle" width="18"></iconify-icon></span><span><b>FAQ</b><small>Questions fréquentes.</small></span></a><a class="mega-item" href="contact.html"><span class="mega-ic"><iconify-icon icon="lucide:send" width="18"></iconify-icon></span><span><b>Contact</b><small>Parlons de votre projet.</small></span></a></div>
   </div>
@@ -1647,7 +1986,7 @@ html.light .ct-field input,html.light .ct-field select,html.light .ct-field text
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>window.CARMY_I18N = {"Accueil": "Home", "Services": "Services", "Réalisations": "Work", "Secteurs": "Industries", "À propos": "About", "Contact": "Contact", "Démarrer un projet": "Start a project", "Mode": "Theme", "Basculer le thème": "Toggle theme", "Changer de langue": "Switch language", "Défiler": "Scroll", "Explorer": "Explore", "Découvrir": "Discover", "Voir nos réalisations": "See our work", "Mentions légales": "Legal notice", "Confidentialité": "Privacy", "VECTORIA ONE. Tous droits réservés.": "VECTORIA ONE. All rights reserved.", "Studio de solutions technologiques basé à Dakar. Applications web et mobiles, design, cloud — des produits digitaux qui font grandir votre entreprise.": "Technology studio based in Dakar. Web and mobile applications, design, cloud — digital products that grow your business.", "Nos réalisations": "Our work", "Secteurs d'activité": "Industries", "Le studio": "The studio", "Questions fréquentes": "Frequently asked questions", "Lun – Ven · 09h00 – 18h00": "Mon – Fri · 9:00 AM – 6:00 PM", "Point E, Rue de Kaolack": "Point E, Rue de Kaolack", "Dakar, Sénégal": "Dakar, Senegal", "Développement Web": "Web Development", "Sites et applications web rapides, robustes, élégants.": "Fast, robust, elegant websites and web apps.", "Applications Mobiles": "Mobile Apps", "iOS et Android, natif ou cross-platform.": "iOS and Android, native or cross-platform.", "UI/UX Design": "UI/UX Design", "Des interfaces que vos utilisateurs adorent.": "Interfaces your users love.", "E-commerce": "E-commerce", "Vendez en ligne, encaissez partout.": "Sell online, get paid everywhere.", "Cloud & DevOps": "Cloud & DevOps", "Déploiements sûrs, infrastructures qui tiennent.": "Safe deployments, infrastructure that holds.", "Maintenance & Support": "Maintenance & Support", "Vos applications veillées en continu.": "Your applications watched around the clock.", "Six savoir-faire, un studio": "Six crafts, one studio", "FAQ": "FAQ", "Parlons de votre projet": "Let's talk about your project", "Notre histoire et nos valeurs.": "Our story and values.", "Questions fréquentes.": "Frequently asked questions.", "Web · Mobile · Cloud — Dakar, Sénégal": "Web · Mobile · Cloud — Dakar, Senegal", "LE DIGITAL,": "DIGITAL,", "SANS FRICTION.": "FRICTION-FREE.", "SANS RETARD.": "NEVER LATE.", "SANS LIMITE.": "LIMITLESS.", "SANS COMPROMIS.": "NO COMPROMISE.", "Vectoria One conçoit et développe vos applications web et mobiles — du cadrage au déploiement, avec un suivi de projet 100 % transparent.": "Vectoria One designs and builds your web and mobile applications — from scoping to deployment, with 100% transparent project tracking.", "VectoriaHub · Suivi de projet": "VectoriaHub · Project tracking", "Projet — App Livraison": "Project — Delivery App", "Cadrage & maquettes": "Scoping & mockups", "Sprint 3 / 6": "Sprint 3 / 6", "Tests & QA": "Tests & QA", "Déploiement": "Deployment", "Terminé": "Done", "En cours": "In progress", "Planifié": "Planned", "À venir": "Upcoming", "Prochain jalon": "Next milestone", "Bug critique ouvert": "Critical bug open", "Écrans livrés": "Screens delivered", "Web": "Web", "Mobile": "Mobile", "Design": "Design", "Cloud": "Cloud", "Data": "Data", "Support": "Support", "Projets livrés": "Projects shipped", "Années d'expérience": "Years of experience", "Clients satisfaits": "Happy clients", "Incident critique en 2025": "Critical incident in 2025", "Qui sommes-nous": "Who we are", "L'exigence du code,": "The rigour of code,", "l'élégance du design.": "the elegance of design.", "Vectoria One est un studio technologique basé à Dakar, pensé pour les entreprises qui veulent des produits digitaux fiables, beaux et utiles — sans jargon ni mauvaises surprises.": "Vectoria One is a technology studio based in Dakar, built for companies that want reliable, beautiful, useful digital products — no jargon, no bad surprises.", "Nous avons créé": "We built", ", notre espace client : suivez vos sprints, testez les livrables et échangez avec l'équipe — en temps réel.": ", our client space: track your sprints, test deliverables and talk with the team — in real time.", "Découvrir le studio": "Discover the studio", "Code propriétaire livré": "Proprietary code delivered", "Votre code vous appartient : dépôt Git transmis, documentation incluse, aucune dépendance cachée.": "Your code belongs to you: Git repository handed over, documentation included, no hidden dependency.", "Nos services": "Our services", "Six savoir-faire,": "Six crafts,", "un seul studio.": "one studio.", "Du cadrage au déploiement, Vectoria couvre tout le cycle de vie de votre produit digital — avec la même exigence à chaque étape.": "From scoping to deployment, Vectoria covers your digital product's whole lifecycle — with the same standard at every step.", "Workflow": "Workflow", "Cadrage": "Scoping", "Développement": "Build", "Maquettes": "Mockups", "Prototype": "Prototype", "Tests": "Tests", "Stores": "Stores", "Audit": "Audit", "Sprints": "Sprints", "Recette": "UAT", "Mise en ligne": "Go live", "CI/CD": "CI/CD", "Monitoring": "Monitoring", "Catalogue": "Catalog", "Paiement": "Payment", "Croissance": "Growth", "Alertes": "Alerts", "Correctifs": "Fixes", "Évolutions": "Upgrades", "Secteurs d'activités": "Industries", "Nous parlons le langage": "We speak the language", "de votre métier.": "of your business.", "Chaque secteur a ses codes, ses contraintes et ses outils. Nous les connaissons — et nous construisons en conséquence.": "Every industry has its codes, constraints and tools. We know them — and we build accordingly.", "Finance": "Finance", "Fintech, paiement mobile, tableaux de bord réglementaires : des applications sûres pour l'argent de vos clients.": "Fintech, mobile money, regulatory dashboards: safe applications for your clients' money.", "Import-Export": "Import-Export", "Transit, tracking, douane digitale : des plateformes qui fluidifient vos flux logistiques.": "Freight, tracking, digital customs: platforms that streamline your logistics flows.", "Formation & Compétences": "Training & Skills", "E-learning, LMS, certification : des outils qui font monter vos équipes en compétences.": "E-learning, LMS, certification: tools that upskill your teams.", "Consulting": "Consulting", "Transformation digitale, audit SI, stratégie produit : un regard d'ingénieur sur vos décisions.": "Digital transformation, IT audit, product strategy: an engineer's eye on your decisions.", "Paiement mobile": "Mobile money", "Conformité": "Compliance", "Scoring": "Scoring", "Tracking": "Tracking", "Douane": "Customs", "Flotte": "Fleet", "LMS": "LMS", "Certification": "Certification", "Classes virtuelles": "Virtual classes", "Audit SI": "IT audit", "Stratégie": "Strategy", "Produit": "Product", "Tous les secteurs": "All industries", "Des produits qui tournent,": "Products that run,", "en production.": "in production.", "Quatre projets récents, quatre preuves que la méthode Vectoria fonctionne. Survolez une carte pour voir les résultats.": "Four recent projects, four proofs the Vectoria method works. Hover a card to see the results.", "Site vitrine · Cabinet comptable": "Showcase site · Accounting firm", "Carmy Accountants": "Carmy Accountants", "Cabinet d'expertise comptable · Dakar": "Accounting firm · Dakar", "Pages": "Pages", "Délai": "Lead time", "Langues": "Languages", "Plateforme web · Logistique": "Web platform · Logistics", "Ndiaya Transit": "Ndiaya Transit", "Transit & dédouanement · Dakar": "Freight & customs · Dakar", "Uptime": "Uptime", "Modules": "Modules", "App mobile · Transport": "Mobile app · Transport", "Gestion de flotte": "Fleet management", "120 chauffeurs connectés · Sénégal": "120 connected drivers · Senegal", "Livraisons": "Deliveries", "Chauffeurs": "Drivers", "Note stores": "Store rating", "Plateforme e-learning": "E-learning platform", "Académie en ligne": "Online academy", "5 000 apprenants · Afrique de l'Ouest": "5,000 learners · West Africa", "Apprenants": "Learners", "Cours": "Courses", "Complétion": "Completion", "3 sem": "3 wks", "4 sem": "4 wks", "6 sem": "6 wks", "2 sem": "2 wks", "Voir le site": "Visit site", "Étude de cas": "Case study", "Notre méthode": "Our method", "Votre produit, de l'idée": "Your product, from idea", "à la production.": "to production.", "100 % des jalons tenus": "100% of milestones met", "0 surprise visée": "0 surprises targeted", "Un parcours balisé du discovery au run : chaque étape est planifiée, suivie sur VectoriaHub et validée avec vous — sans jargon ni surprise.": "A marked path from discovery to run: every step is planned, tracked on VectoriaHub and approved with you — no jargon, no surprises.", "Semaine 1": "Week 1", "Semaines 2-3": "Weeks 2-3", "Livraison": "Delivery", "01 · Discovery": "01 · Discovery", "02 · Design UX/UI": "02 · UX/UI Design", "03 · Développement": "03 · Development", "04 · Recette & QA": "04 · UAT & QA", "05 · Run & évolutions": "05 · Run & upgrades", "Ateliers, personas, périmètre et chiffrage — devis sous 72 h": "Workshops, personas, scope and estimate — quote within 72h", "Maquettes haute fidélité, prototype cliquable, design system": "High-fidelity mockups, clickable prototype, design system", "Sprints de 2 semaines, démo à chaque fin de sprint sur VectoriaHub": "2-week sprints, demo at every sprint end on VectoriaHub", "Tests utilisateurs, corrections, performance et sécurité": "User testing, fixes, performance and security", "Monitoring, support et nouvelles fonctionnalités en continu": "Monitoring, support and new features continuously", "Études de cas": "Case studies", "Des résultats qui parlent": "Results that speak", "d'eux-mêmes.": "for themselves.", "Du délai de livraison au chiffre d'affaires, nos clients mesurent l'impact Vectoria sur chaque indicateur qui compte. Survolez ou touchez une carte.": "From delivery time to revenue, our clients measure Vectoria's impact on every metric that matters. Hover or tap a card.", "Étude de cas — Site vitrine": "Case study — Showcase site", "Un cabinet comptable,": "An accounting firm,", "en ligne en 3 semaines": "online in 3 weeks", "18 pages bilingues, mode sombre, animations sur mesure et déploiement Vercel : le cabinet Carmy Accountants a lancé sa présence digitale sans écrire une ligne de code.": "18 bilingual pages, dark mode, custom animations and Vercel deployment: Carmy Accountants launched its digital presence without writing a line of code.", "Voir la réalisation": "See the project", "De délai tenu": "Deadline met", "Étude de cas — Plateforme": "Case study — Platform", "La logistique passée au digital": "Logistics gone digital", "Suivi de dossiers en temps réel, notifications et espace client : Ndiaya Transit a réduit les appels entrants et accéléré ses dossiers de dédouanement.": "Real-time file tracking, notifications and a client space: Ndiaya Transit cut inbound calls and sped up customs files.", "D'appels entrants": "Inbound calls", "Étude de cas — Mobile": "Case study — Mobile", "Une flotte pilotée depuis le téléphone": "A fleet steered from the phone", "Application chauffeur, dispatch en temps réel et preuves de livraison : les tournées sont optimisées et les litiges documentés.": "Driver app, real-time dispatch and delivery proofs: routes are optimised and disputes documented.", "De livraisons en plus": "More deliveries", "Étude de cas — Web app": "Case study — Web app", "Former 5 000 personnes en ligne": "Training 5,000 people online", "LMS sur mesure, vidéos, quiz et certificats : l'académie forme à grande échelle avec un taux de complétion record.": "Custom LMS, videos, quizzes and certificates: the academy trains at scale with a record completion rate.", "De complétion": "Completion rate", "Faites le point dès maintenant :": "Take stock now:", "demandez votre étude gratuite": "request your free assessment", "L'équipe Vectoria": "The Vectoria team", "Des visages derrière": "Faces behind", "votre produit.": "your product.", "Développeurs, designers et chefs de projet : l'équipe qui conçoit, code et fait tourner vos applications.": "Developers, designers and project leads: the team that designs, codes and runs your applications.", "Témoignages": "Testimonials", "Ce que nos clients disent.": "What our clients say.", "CEO & Lead Developer": "CEO & Lead Developer", "CTO": "CTO", "Designer UI/UX": "UI/UX Designer", "Développeur Mobile": "Mobile Developer", "Développeuse Backend": "Backend Developer", "Cheffe de projet": "Project Lead", "Tout ce qu'il faut savoir avant de lancer votre projet avec Vectoria.": "Everything to know before starting your project with Vectoria.", "Rechercher une question…": "Search a question…", "Aucune question ne correspond à votre recherche.": "No question matches your search.", "Combien coûte une application ?": "How much does an app cost?", "Chaque projet est chiffré après un cadrage gratuit : un site vitrine démarre autour de quelques centaines de milliers de FCFA, une application métier se chiffre par sprints. Devis détaillé sous 72 h, sans surprise ensuite.": "Every project is priced after a free scoping: a showcase site starts around a few hundred thousand FCFA, a business application is priced by sprints. Detailed quote within 72h, no surprises after.", "Combien de temps pour livrer ?": "How long to deliver?", "Un site vitrine : 2 à 4 semaines. Une application web ou mobile : 6 à 12 semaines selon le périmètre, en sprints de 2 semaines avec démo à chaque étape.": "A showcase site: 2 to 4 weeks. A web or mobile application: 6 to 12 weeks depending on scope, in 2-week sprints with a demo at each step.", "À qui appartient le code ?": "Who owns the code?", "À vous, intégralement. Dépôt Git transmis, documentation incluse, aucune dépendance cachée ni abonnement forcé.": "You, entirely. Git repository handed over, documentation included, no hidden dependency or forced subscription.", "Assurez-vous la maintenance ?": "Do you provide maintenance?", "Oui : contrats de support avec monitoring, sauvegardes, correctifs et évolutions. Vos applications sont veillées en continu.": "Yes: support contracts with monitoring, backups, fixes and upgrades. Your applications are watched continuously.", "Travaillez-vous avec les startups ?": "Do you work with startups?", "Absolument : MVP en quelques semaines, architecture qui grandit avec vous, et accompagnement produit au-delà du code.": "Absolutely: MVP in a few weeks, architecture that grows with you, and product support beyond the code.", "Comment suivons-nous le projet ?": "How do we track the project?", "Sur VectoriaHub, votre espace client : avancement des sprints, livrables à tester, tickets et échanges — tout est transparent, en temps réel.": "On VectoriaHub, your client space: sprint progress, deliverables to test, tickets and conversations — everything transparent, in real time.", "Utilisez-vous l'IA ?": "Do you use AI?", "Oui, partout où elle crée de la valeur : chatbots, automatisations, analyse de données — intégrée proprement à vos outils.": "Yes, wherever it creates value: chatbots, automations, data analysis — cleanly integrated into your tools.", "Et si je ne suis pas satisfait ?": "What if I'm not satisfied?", "Chaque sprint est validé par vous avant le suivant. En cas de désaccord, on corrige avant d'avancer — c'est contractuel.": "You approve every sprint before the next. If something is off, we fix it before moving on — it's contractual.", "Contactez-nous": "Contact us", "Un partenaire unique": "A single partner", "pour tout votre digital.": "for all your digital.", "Nous répondons à vos questions et vous aidons à cadrer votre projet : web, mobile, design, cloud ou consulting.": "We answer your questions and help scope your project: web, mobile, design, cloud or consulting.", "Interlocuteur dédié": "Dedicated contact", "Devis sans surprise": "No-surprise quote", "Jalons garantis": "Guaranteed milestones", "Réactivité 24 h": "24h responsiveness", "Et ensuite ?": "What happens next?", "Nous planifions un appel ou un atelier à votre convenance.": "We schedule a call or workshop at your convenience.", "Cadrage gratuit de votre projet et de vos besoins.": "Free scoping of your project and needs.", "Devis détaillé sous 72 h ouvrées.": "Detailed quote within 72 working hours.", "Planifier un atelier gratuit": "Schedule a free workshop", "Réponse garantie sous un jour ouvré.": "Guaranteed reply within one business day.", "Nom complet *": "Full name *", "Téléphone / WhatsApp *": "Phone / WhatsApp *", "E-mail *": "E-mail *", "Votre besoin *": "Your need *", "Votre message *": "Your message *", "Sélectionner…": "Select…", "Site web vitrine": "Showcase website", "Application web": "Web application", "Application mobile": "Mobile application", "Boutique e-commerce": "E-commerce store", "Design UI/UX": "UI/UX design", "Autre demande": "Other request", "Décrivez brièvement votre projet et vos objectifs…": "Briefly describe your project and goals…", "Merci ! Un membre de l'équipe Vectoria vous recontacte sous un jour ouvré.": "Thank you! A Vectoria team member will contact you within one business day.", "Vos informations ne servent qu'à traiter votre demande.": "Your information is only used to process your request.", "Envoyer ma demande": "Send my request", "Écosystème": "Ecosystem", "Bâti sur des technologies": "Built on technologies", "qui ont fait leurs preuves.": "proven at scale.", "React, Flutter, Node.js, PostgreSQL, AWS, Figma : nous choisissons des briques éprouvées, maintenues et documentées — jamais des paris.": "React, Flutter, Node.js, PostgreSQL, AWS, Figma: we pick proven, maintained, documented building blocks — never bets.", "Une idée en tête ?": "An idea in mind?", "Codons-la": "Let's code it", "ensemble": "together", "Étude gratuite de votre projet, devis détaillé sous 72 h et accès à votre espace VectoriaHub dès le premier sprint.": "Free project assessment, detailed quote within 72h and access to your VectoriaHub space from the first sprint.", "Nous rejoindre sur ce secteur": "Join us on this sector", "Démarrer un projet": "Start a project", "Clients accompagnés": "Clients supported", "Secteur": "Sector", "Un regard d'ingénieur sur vos décisions": "An engineer's eye on your decisions", "Un regard d'ingénieur": "An engineer's eye", "sur vos décisions": "on your decisions", "Transformation digitale, audit SI, stratégie produit : nous challengeons vos choix avec des faits, des mesures et du code — pas des slides.": "Digital transformation, IT audit, product strategy: we challenge your choices with facts, measurements and code — not slides.", "Audits et cadrages menés": "Audits and scoping missions", "Secteur — Consulting": "Sector — Consulting", "Audit technique et dette": "Audit technique et dette", "Cadrage produit et chiffrage": "Cadrage produit et chiffrage", "Architecture et montée en charge": "Architecture et montée en charge", "Direction technique déléguée": "Direction technique déléguée", "Voir nos expertises": "See our expertise", "Un partenaire unique pour tout construire.": "One partner to build it all.", "Appelez-nous": "Call us", "Planifier une consultation gratuite": "Book a free consultation", "Téléphone *": "Phone *", "Votre demande *": "Your request *", "Message *": "Message *", "Merci ! Votre demande a bien été envoyée. Nous revenons vers vous sous un jour ouvré.": "Thank you! Your request has been sent. We'll get back to you within one business day."};</script>
+<script>window.CARMY_I18N = {"Accueil": "Home", "Services": "Services", "Réalisations": "Work", "Secteurs": "Industries", "À propos": "About", "Contact": "Contact", "Démarrer un projet": "Start a project", "Mode": "Theme", "Basculer le thème": "Toggle theme", "Changer de langue": "Switch language", "Défiler": "Scroll", "Explorer": "Explore", "Découvrir": "Discover", "Voir nos réalisations": "See our work", "Mentions légales": "Legal notice", "Confidentialité": "Privacy", "VECTORIA ONE. Tous droits réservés.": "VECTORIA ONE. All rights reserved.", "Studio de solutions technologiques basé à Dakar. Applications web et mobiles, design, cloud — des produits digitaux qui font grandir votre entreprise.": "Technology studio based in Dakar. Web and mobile applications, design, cloud — digital products that grow your business.", "Nos réalisations": "Our work", "Secteurs d'activité": "Industries", "Le studio": "The studio", "Questions fréquentes": "Frequently asked questions", "Lun – Ven · 09h00 – 18h00": "Mon – Fri · 9:00 AM – 6:00 PM", "Point E, Rue de Kaolack": "Point E, Rue de Kaolack", "Dakar, Sénégal": "Dakar, Senegal", "Développement Web": "Web Development", "Sites et applications web rapides, robustes, élégants.": "Fast, robust, elegant websites and web apps.", "Applications Mobiles": "Mobile Apps", "iOS et Android, natif ou cross-platform.": "iOS and Android, native or cross-platform.", "UI/UX Design": "UI/UX Design", "Des interfaces que vos utilisateurs adorent.": "Interfaces your users love.", "E-commerce": "E-commerce", "Vendez en ligne, encaissez partout.": "Sell online, get paid everywhere.", "Cloud & DevOps": "Cloud & DevOps", "Déploiements sûrs, infrastructures qui tiennent.": "Safe deployments, infrastructure that holds.", "Maintenance & Support": "Maintenance & Support", "Vos applications veillées en continu.": "Your applications watched around the clock.", "Six savoir-faire, un studio": "Six crafts, one studio", "FAQ": "FAQ", "Parlons de votre projet": "Let's talk about your project", "Notre histoire et nos valeurs.": "Our story and values.", "Questions fréquentes.": "Frequently asked questions.", "Web · Mobile · Cloud — Dakar, Sénégal": "Web · Mobile · Cloud — Dakar, Senegal", "LE DIGITAL,": "DIGITAL,", "SANS FRICTION.": "FRICTION-FREE.", "SANS RETARD.": "NEVER LATE.", "SANS LIMITE.": "LIMITLESS.", "SANS COMPROMIS.": "NO COMPROMISE.", "Vectoria One conçoit et développe vos applications web et mobiles — du cadrage au déploiement, avec un suivi de projet 100 % transparent.": "Vectoria One designs and builds your web and mobile applications — from scoping to deployment, with 100% transparent project tracking.", "VectoriaHub · Suivi de projet": "VectoriaHub · Project tracking", "Projet — App Livraison": "Project — Delivery App", "Cadrage & maquettes": "Scoping & mockups", "Sprint 3 / 6": "Sprint 3 / 6", "Tests & QA": "Tests & QA", "Déploiement": "Deployment", "Terminé": "Done", "En cours": "In progress", "Planifié": "Planned", "À venir": "Upcoming", "Prochain jalon": "Next milestone", "Bug critique ouvert": "Critical bug open", "Écrans livrés": "Screens delivered", "Web": "Web", "Mobile": "Mobile", "Design": "Design", "Cloud": "Cloud", "Data": "Data", "Support": "Support", "Projets livrés": "Projects shipped", "Années d'expérience": "Years of experience", "Clients satisfaits": "Happy clients", "Incident critique en 2025": "Critical incident in 2025", "Qui sommes-nous": "Who we are", "L'exigence du code,": "The rigour of code,", "l'élégance du design.": "the elegance of design.", "Vectoria One est un studio technologique basé à Dakar, pensé pour les entreprises qui veulent des produits digitaux fiables, beaux et utiles — sans jargon ni mauvaises surprises.": "Vectoria One is a technology studio based in Dakar, built for companies that want reliable, beautiful, useful digital products — no jargon, no bad surprises.", "Nous avons créé": "We built", ", notre espace client : suivez vos sprints, testez les livrables et échangez avec l'équipe — en temps réel.": ", our client space: track your sprints, test deliverables and talk with the team — in real time.", "Découvrir le studio": "Discover the studio", "Code propriétaire livré": "Proprietary code delivered", "Votre code vous appartient : dépôt Git transmis, documentation incluse, aucune dépendance cachée.": "Your code belongs to you: Git repository handed over, documentation included, no hidden dependency.", "Nos services": "Our services", "Six savoir-faire,": "Six crafts,", "un seul studio.": "one studio.", "Du cadrage au déploiement, Vectoria couvre tout le cycle de vie de votre produit digital — avec la même exigence à chaque étape.": "From scoping to deployment, Vectoria covers your digital product's whole lifecycle — with the same standard at every step.", "Workflow": "Workflow", "Cadrage": "Scoping", "Développement": "Build", "Maquettes": "Mockups", "Prototype": "Prototype", "Tests": "Tests", "Stores": "Stores", "Audit": "Audit", "Sprints": "Sprints", "Recette": "UAT", "Mise en ligne": "Go live", "CI/CD": "CI/CD", "Monitoring": "Monitoring", "Catalogue": "Catalog", "Paiement": "Payment", "Croissance": "Growth", "Alertes": "Alerts", "Correctifs": "Fixes", "Évolutions": "Upgrades", "Secteurs d'activités": "Industries", "Nous parlons le langage": "We speak the language", "de votre métier.": "of your business.", "Chaque secteur a ses codes, ses contraintes et ses outils. Nous les connaissons — et nous construisons en conséquence.": "Every industry has its codes, constraints and tools. We know them — and we build accordingly.", "Finance": "Finance", "Fintech, paiement mobile, tableaux de bord réglementaires : des applications sûres pour l'argent de vos clients.": "Fintech, mobile money, regulatory dashboards: safe applications for your clients' money.", "Import-Export": "Import-Export", "Transit, tracking, douane digitale : des plateformes qui fluidifient vos flux logistiques.": "Freight, tracking, digital customs: platforms that streamline your logistics flows.", "Formation & Compétences": "Training & Skills", "E-learning, LMS, certification : des outils qui font monter vos équipes en compétences.": "E-learning, LMS, certification: tools that upskill your teams.", "Consulting": "Consulting", "Transformation digitale, audit SI, stratégie produit : un regard d'ingénieur sur vos décisions.": "Digital transformation, IT audit, product strategy: an engineer's eye on your decisions.", "Paiement mobile": "Mobile money", "Conformité": "Compliance", "Scoring": "Scoring", "Tracking": "Tracking", "Douane": "Customs", "Flotte": "Fleet", "LMS": "LMS", "Certification": "Certification", "Classes virtuelles": "Virtual classes", "Audit SI": "IT audit", "Stratégie": "Strategy", "Produit": "Product", "Tous les secteurs": "All industries", "Des produits qui tournent,": "Products that run,", "en production.": "in production.", "Quatre projets récents, quatre preuves que la méthode Vectoria fonctionne. Survolez une carte pour voir les résultats.": "Four recent projects, four proofs the Vectoria method works. Hover a card to see the results.", "Site vitrine · Cabinet comptable": "Showcase site · Accounting firm", "Carmy Accountants": "Carmy Accountants", "Cabinet d'expertise comptable · Dakar": "Accounting firm · Dakar", "Pages": "Pages", "Délai": "Lead time", "Langues": "Languages", "Plateforme web · Logistique": "Web platform · Logistics", "Ndiaya Transit": "Ndiaya Transit", "Transit & dédouanement · Dakar": "Freight & customs · Dakar", "Uptime": "Uptime", "Modules": "Modules", "App mobile · Transport": "Mobile app · Transport", "Gestion de flotte": "Fleet management", "120 chauffeurs connectés · Sénégal": "120 connected drivers · Senegal", "Livraisons": "Deliveries", "Chauffeurs": "Drivers", "Note stores": "Store rating", "Plateforme e-learning": "E-learning platform", "Académie en ligne": "Online academy", "5 000 apprenants · Afrique de l'Ouest": "5,000 learners · West Africa", "Apprenants": "Learners", "Cours": "Courses", "Complétion": "Completion", "3 sem": "3 wks", "4 sem": "4 wks", "6 sem": "6 wks", "2 sem": "2 wks", "Voir le site": "Visit site", "Étude de cas": "Case study", "Notre méthode": "Our method", "Votre produit, de l'idée": "Your product, from idea", "à la production.": "to production.", "100 % des jalons tenus": "100% of milestones met", "0 surprise visée": "0 surprises targeted", "Un parcours balisé du discovery au run : chaque étape est planifiée, suivie sur VectoriaHub et validée avec vous — sans jargon ni surprise.": "A marked path from discovery to run: every step is planned, tracked on VectoriaHub and approved with you — no jargon, no surprises.", "Semaine 1": "Week 1", "Semaines 2-3": "Weeks 2-3", "Livraison": "Delivery", "01 · Discovery": "01 · Discovery", "02 · Design UX/UI": "02 · UX/UI Design", "03 · Développement": "03 · Development", "04 · Recette & QA": "04 · UAT & QA", "05 · Run & évolutions": "05 · Run & upgrades", "Ateliers, personas, périmètre et chiffrage — devis sous 72 h": "Workshops, personas, scope and estimate — quote within 72h", "Maquettes haute fidélité, prototype cliquable, design system": "High-fidelity mockups, clickable prototype, design system", "Sprints de 2 semaines, démo à chaque fin de sprint sur VectoriaHub": "2-week sprints, demo at every sprint end on VectoriaHub", "Tests utilisateurs, corrections, performance et sécurité": "User testing, fixes, performance and security", "Monitoring, support et nouvelles fonctionnalités en continu": "Monitoring, support and new features continuously", "Études de cas": "Case studies", "Des résultats qui parlent": "Results that speak", "d'eux-mêmes.": "for themselves.", "Du délai de livraison au chiffre d'affaires, nos clients mesurent l'impact Vectoria sur chaque indicateur qui compte. Survolez ou touchez une carte.": "From delivery time to revenue, our clients measure Vectoria's impact on every metric that matters. Hover or tap a card.", "Étude de cas — Site vitrine": "Case study — Showcase site", "Un cabinet comptable,": "An accounting firm,", "en ligne en 3 semaines": "online in 3 weeks", "18 pages bilingues, mode sombre, animations sur mesure et déploiement Vercel : le cabinet Carmy Accountants a lancé sa présence digitale sans écrire une ligne de code.": "18 bilingual pages, dark mode, custom animations and Vercel deployment: Carmy Accountants launched its digital presence without writing a line of code.", "Voir la réalisation": "See the project", "De délai tenu": "Deadline met", "Étude de cas — Plateforme": "Case study — Platform", "La logistique passée au digital": "Logistics gone digital", "Suivi de dossiers en temps réel, notifications et espace client : Ndiaya Transit a réduit les appels entrants et accéléré ses dossiers de dédouanement.": "Real-time file tracking, notifications and a client space: Ndiaya Transit cut inbound calls and sped up customs files.", "D'appels entrants": "Inbound calls", "Étude de cas — Mobile": "Case study — Mobile", "Une flotte pilotée depuis le téléphone": "A fleet steered from the phone", "Application chauffeur, dispatch en temps réel et preuves de livraison : les tournées sont optimisées et les litiges documentés.": "Driver app, real-time dispatch and delivery proofs: routes are optimised and disputes documented.", "De livraisons en plus": "More deliveries", "Étude de cas — Web app": "Case study — Web app", "Former 5 000 personnes en ligne": "Training 5,000 people online", "LMS sur mesure, vidéos, quiz et certificats : l'académie forme à grande échelle avec un taux de complétion record.": "Custom LMS, videos, quizzes and certificates: the academy trains at scale with a record completion rate.", "De complétion": "Completion rate", "Faites le point dès maintenant :": "Take stock now:", "demandez votre étude gratuite": "request your free assessment", "L'équipe Vectoria": "The Vectoria team", "Des visages derrière": "Faces behind", "votre produit.": "your product.", "Développeurs, designers et chefs de projet : l'équipe qui conçoit, code et fait tourner vos applications.": "Developers, designers and project leads: the team that designs, codes and runs your applications.", "Témoignages": "Testimonials", "Ce que nos clients disent.": "What our clients say.", "CEO & Lead Developer": "CEO & Lead Developer", "CTO": "CTO", "Designer UI/UX": "UI/UX Designer", "Développeur Mobile": "Mobile Developer", "Développeuse Backend": "Backend Developer", "Cheffe de projet": "Project Lead", "Tout ce qu'il faut savoir avant de lancer votre projet avec Vectoria.": "Everything to know before starting your project with Vectoria.", "Rechercher une question…": "Search a question…", "Aucune question ne correspond à votre recherche.": "No question matches your search.", "Combien coûte une application ?": "How much does an app cost?", "Chaque projet est chiffré après un cadrage gratuit : un site vitrine démarre autour de quelques centaines de milliers de FCFA, une application métier se chiffre par sprints. Devis détaillé sous 72 h, sans surprise ensuite.": "Every project is priced after a free scoping: a showcase site starts around a few hundred thousand FCFA, a business application is priced by sprints. Detailed quote within 72h, no surprises after.", "Combien de temps pour livrer ?": "How long to deliver?", "Un site vitrine : 2 à 4 semaines. Une application web ou mobile : 6 à 12 semaines selon le périmètre, en sprints de 2 semaines avec démo à chaque étape.": "A showcase site: 2 to 4 weeks. A web or mobile application: 6 to 12 weeks depending on scope, in 2-week sprints with a demo at each step.", "À qui appartient le code ?": "Who owns the code?", "À vous, intégralement. Dépôt Git transmis, documentation incluse, aucune dépendance cachée ni abonnement forcé.": "You, entirely. Git repository handed over, documentation included, no hidden dependency or forced subscription.", "Assurez-vous la maintenance ?": "Do you provide maintenance?", "Oui : contrats de support avec monitoring, sauvegardes, correctifs et évolutions. Vos applications sont veillées en continu.": "Yes: support contracts with monitoring, backups, fixes and upgrades. Your applications are watched continuously.", "Travaillez-vous avec les startups ?": "Do you work with startups?", "Absolument : MVP en quelques semaines, architecture qui grandit avec vous, et accompagnement produit au-delà du code.": "Absolutely: MVP in a few weeks, architecture that grows with you, and product support beyond the code.", "Comment suivons-nous le projet ?": "How do we track the project?", "Sur VectoriaHub, votre espace client : avancement des sprints, livrables à tester, tickets et échanges — tout est transparent, en temps réel.": "On VectoriaHub, your client space: sprint progress, deliverables to test, tickets and conversations — everything transparent, in real time.", "Utilisez-vous l'IA ?": "Do you use AI?", "Oui, partout où elle crée de la valeur : chatbots, automatisations, analyse de données — intégrée proprement à vos outils.": "Yes, wherever it creates value: chatbots, automations, data analysis — cleanly integrated into your tools.", "Et si je ne suis pas satisfait ?": "What if I'm not satisfied?", "Chaque sprint est validé par vous avant le suivant. En cas de désaccord, on corrige avant d'avancer — c'est contractuel.": "You approve every sprint before the next. If something is off, we fix it before moving on — it's contractual.", "Contactez-nous": "Contact us", "Un partenaire unique": "A single partner", "pour tout votre digital.": "for all your digital.", "Nous répondons à vos questions et vous aidons à cadrer votre projet : web, mobile, design, cloud ou consulting.": "We answer your questions and help scope your project: web, mobile, design, cloud or consulting.", "Interlocuteur dédié": "Dedicated contact", "Devis sans surprise": "No-surprise quote", "Jalons garantis": "Guaranteed milestones", "Réactivité 24 h": "24h responsiveness", "Et ensuite ?": "What happens next?", "Nous planifions un appel ou un atelier à votre convenance.": "We schedule a call or workshop at your convenience.", "Cadrage gratuit de votre projet et de vos besoins.": "Free scoping of your project and needs.", "Devis détaillé sous 72 h ouvrées.": "Detailed quote within 72 working hours.", "Planifier un atelier gratuit": "Schedule a free workshop", "Réponse garantie sous un jour ouvré.": "Guaranteed reply within one business day.", "Nom complet *": "Full name *", "Téléphone / WhatsApp *": "Phone / WhatsApp *", "E-mail *": "E-mail *", "Votre besoin *": "Your need *", "Votre message *": "Your message *", "Sélectionner…": "Select…", "Site web vitrine": "Showcase website", "Application web": "Web application", "Application mobile": "Mobile application", "Boutique e-commerce": "E-commerce store", "Design UI/UX": "UI/UX design", "Autre demande": "Other request", "Décrivez brièvement votre projet et vos objectifs…": "Briefly describe your project and goals…", "Merci ! Un membre de l'équipe Vectoria vous recontacte sous un jour ouvré.": "Thank you! A Vectoria team member will contact you within one business day.", "Vos informations ne servent qu'à traiter votre demande.": "Your information is only used to process your request.", "Envoyer ma demande": "Send my request", "Écosystème": "Ecosystem", "Bâti sur des technologies": "Built on technologies", "qui ont fait leurs preuves.": "proven at scale.", "React, Flutter, Node.js, PostgreSQL, AWS, Figma : nous choisissons des briques éprouvées, maintenues et documentées — jamais des paris.": "React, Flutter, Node.js, PostgreSQL, AWS, Figma: we pick proven, maintained, documented building blocks — never bets.", "Une idée en tête ?": "An idea in mind?", "Codons-la": "Let's code it", "ensemble": "together", "Étude gratuite de votre projet, devis détaillé sous 72 h et accès à votre espace VectoriaHub dès le premier sprint.": "Free project assessment, detailed quote within 72h and access to your VectoriaHub space from the first sprint.", "Nous rejoindre sur ce secteur": "Join us on this sector", "Démarrer un projet": "Start a project", "Clients accompagnés": "Clients supported", "Secteur": "Sector", "Un regard d'ingénieur sur vos décisions": "An engineer's eye on your decisions", "Un regard d'ingénieur": "An engineer's eye", "sur vos décisions": "on your decisions", "Transformation digitale, audit SI, stratégie produit : nous challengeons vos choix avec des faits, des mesures et du code — pas des slides.": "Digital transformation, IT audit, product strategy: we challenge your choices with facts, measurements and code — not slides.", "Audits et cadrages menés": "Audits and scoping missions", "Secteur — Consulting": "Sector — Consulting", "Audit technique et dette": "Audit technique et dette", "Cadrage produit et chiffrage": "Cadrage produit et chiffrage", "Architecture et montée en charge": "Architecture et montée en charge", "Direction technique déléguée": "Direction technique déléguée", "Voir nos expertises": "See our expertise", "Un partenaire unique pour tout construire.": "One partner to build it all.", "Appelez-nous": "Call us", "Planifier une consultation gratuite": "Book a free consultation", "Téléphone *": "Phone *", "Votre demande *": "Your request *", "Message *": "Message *", "Merci ! Votre demande a bien été envoyée. Nous revenons vers vous sous un jour ouvré.": "Thank you! Your request has been sent. We'll get back to you within one business day.", "Autre":"Other", "Studio":"Studio", "Envoyer":"Send", "Message":"Message", "Téléphone":"Phone", "Ressources":"Resources", "Maintenance":"Maintenance", "Nom complet":"Full name", "Performance":"Performance", "Architecture":"Architecture", "À la demande":"On demand", "Vous ne savez pas par où commencer ?":"Not sure where to start?", "Planifier un échange":"Book a call", "Audit technique":"Technical audit", "Cadrage produit":"Product scoping", "Décrivez brièvement votre projet…":"Briefly describe your project…"};</script>
 <script>
 /* ============================================================
    CARMY — main.js (robuste, tolérant aux pannes)
@@ -2269,6 +2608,45 @@ html.light .ct-field input,html.light .ct-field select,html.light .ct-field text
       });
       function reset() { clearInterval(timer); timer = setInterval(function () { show((cur + 1) % DATA.length); }, 6000); }
       reset();
+    })();
+
+
+    /* ---------- LOADER : jauge de pourcentage ---------- */
+    (function () {
+      var pctEl = document.getElementById("pct"), bar = document.querySelector("#preloader .bar i");
+      if (!pctEl || !bar) return;
+      var v = 0, done = false;
+      var tick = setInterval(function () {
+        v += done ? 8 : Math.max(0.6, (88 - v) / 12);
+        if (v >= 100) { v = 100; clearInterval(tick); }
+        pctEl.textContent = Math.floor(v) + "%";
+        bar.style.width = v + "%";
+      }, 60);
+      window.addEventListener("load", function () { done = true; });
+    })();
+
+
+    /* ---------- NAV : repli au défilement vers le bas, dépli vers le haut ---------- */
+    (function navScroll() {
+      var nav = document.querySelector(".site-nav");
+      if (!nav) return;
+      var last = window.scrollY, ticking = false;
+      nav.classList.add("nav-open");
+      function upd() {
+        var y = window.scrollY;
+        if (y < 80) {                       // tout en haut : toujours déplié
+          nav.classList.add("nav-open"); nav.classList.remove("nav-tight");
+        } else if (y > last + 6) {          // on descend : replier
+          nav.classList.add("nav-tight"); nav.classList.remove("nav-open");
+        } else if (y < last - 6) {          // on remonte : déplier
+          nav.classList.add("nav-open"); nav.classList.remove("nav-tight");
+        }
+        last = y; ticking = false;
+      }
+      window.addEventListener("scroll", function () {
+        if (!ticking) { requestAnimationFrame(upd); ticking = true; }
+      }, { passive: true });
+      upd();
     })();
 
     /* ---------- ANNÉE ---------- */
