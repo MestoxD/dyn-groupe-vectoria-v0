@@ -1,1 +1,1 @@
-# dyn-groupe-vectoria-v0
+# dyn-groupe-holding-vectoria-v0
